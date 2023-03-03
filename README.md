@@ -1,1 +1,2 @@
-# imgroup-website
+# Site de prezentare - imgroup.ro
+
