@@ -1,0 +1,221 @@
+
+/* Slideshow container */
+.slideshow-container {
+  width: 65%;
+  box-sizing: border-box;
+  height: 700px;
+  position: relative;
+  margin: auto;
+  align-content: center;
+  margin-top: 20px;
+  z-index: 0;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.mySlides {display: none;}
+
+.img-slides {
+  object-fit: fill;
+  vertical-align: middle; height: 700px; width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+}
+
+/* optimizări rezolutii mici */
+
+@media only screen and (max-width: 1200px) {
+  .slideshow-container{
+    height: 500px;
+    width: 75%;
+  }
+  .hidden-top
+  {
+    top: -500px;
+  }
+  .hidden-left
+  {
+    left: -500px;
+  }
+  .hidden-right
+  {
+    right: -500px;
+  }
+  .hidden-bottom
+  {
+    bottom: -500px;
+  }
+  .img-slides
+  {
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .slideshow-container{
+    height: 350px;
+    width: 100% !important;
+  }
+  .hidden-top
+  {
+    top: -350px;
+  }
+  .hidden-left
+  {
+    left: -350px;
+  }
+  .hidden-right
+  {
+    right: -350px;
+  }
+  .hidden-bottom
+  {
+    bottom: -350px;
+  }
+  .img-slides
+  {
+    height: 350px;
+  }
+}
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* bulleturi/puncte indicator pagina */
+.dotbox
+{
+  text-align: center;
+  display: block;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color:#717171;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.activedot {
+  background-color:  rgb(0, 176, 243);
+}
+
+/* animatie */
+.hidden-top
+{
+  position: absolute;
+  top: -700px;
+  z-index: -1;  
+  animation: fadetop 1s cubic-bezier(0, .58, .40, 1);
+  animation-fill-mode: forwards;
+  display: block;
+  width: 100%;
+}
+.hidden-left
+{
+  position: absolute;
+  top: 0;
+  left: -1200px;
+  z-index: -1;  
+  animation: fadeleft 1s cubic-bezier(0, .58, .40, 1);
+  animation-fill-mode: forwards;
+  display: block;
+  width: 100%;
+}
+.hidden-right
+{
+  position: absolute;
+  right: -1200px;
+  top: 0;
+  z-index: -1;  
+  animation: faderight 1s cubic-bezier(0, .58, .40, 1);
+  animation-fill-mode: forwards;
+  display: block;
+  width: 100%;
+}
+.hidden-bottom
+{
+  position: absolute;
+  bottom: -700px;
+  z-index: -1;  
+  animation: fadebottom 1s cubic-bezier(0, .58, .40, 1);
+  animation-fill-mode: forwards;
+  display: block;
+  width: 100%;
+}
+.destroy
+{
+  display: block;
+  z-index: -2;
+  position: relative;
+  width: 100%;
+  top: 0;
+}
+
+@keyframes fadetop {
+  0% {opacity: 0.1; top: -700;}
+  100% {opacity: 1; top: 0;}
+}
+
+@keyframes fadeleft {
+  0% {opacity: 0.1; left: -1200;}
+  100% {opacity: 1; left: 0;}
+}
+
+@keyframes fadebottom {
+  0% {opacity: 0.1; bottom: -700;}
+  100% {opacity: 1; bottom: 0;}
+}
+
+@keyframes faderight {
+  0% {opacity: 0.1; right: -1200;}
+  100% {opacity: 1; right: 0;}
+}
+
+
+.left{
+  cursor: pointer;
+	position: absolute;
+	bottom: 45%;
+	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	background-color: white;
+	font-weight: bold;
+	font-size: 18px;
+  transition: 0.6s ease;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-left: 0;
+  border-radius: 0 3px 3px 0;
+  left: 0;
+}
+
+.right{
+  cursor: pointer;
+	position: absolute;
+	bottom: 45%;
+	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	background-color: white;
+	font-weight: bold;
+	font-size: 18px;
+  transition: 0.6s ease;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-right: 0;
+  border-radius: 0 3px 3px 0;
+  right: 0;
+}
